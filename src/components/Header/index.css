@@ -1,0 +1,19 @@
+.nav-header-container {
+  height: 10vh;
+  background-color: #272727;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-logo {
+  width: 100px;
+}
+.link-header-container {
+  display: flex;
+}
+.link {
+  margin: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}

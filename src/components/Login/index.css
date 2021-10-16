@@ -1,0 +1,43 @@
+.app-container {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login-card-container {
+  background-color: #272727;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+}
+.website-logo {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+.label {
+  color: #ffffff;
+  font-size: 14px;
+}
+.input {
+  background-color: transparent;
+  padding: 5px;
+  border: 1px solid #64748b;
+  margin-top: 5px;
+  margin-bottom: 15px;
+  outline: none;
+  color: #ffffff;
+}
+.button {
+  padding: 8px;
+  color: #ffffff;
+  background-color: #4f46e5;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.error-msg {
+  color: #ff0b37;
+}
