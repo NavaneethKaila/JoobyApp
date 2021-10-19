@@ -13,7 +13,12 @@
   display: flex;
 }
 .link {
+  list-style-type: none;
   margin: 10px;
   color: #ffffff;
   font-weight: 500;
+}
+.logout-button {
+  align-self: flex-end;
+  margin-left: 250px;
 }

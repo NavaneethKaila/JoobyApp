@@ -41,11 +41,13 @@ class Profile extends Component {
         profileData: updatedData,
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
   renderLoadingView = () => (
-    <div testid="loader">
+    <div testid="loader" className="profile-loader-container">
       <Loader type="ThreeDots" color="#ffffff" height={50} width={50} />
     </div>
   )
@@ -61,6 +63,14 @@ class Profile extends Component {
       </div>
     )
   }
+
+  renderProfileFailureView = () => (
+    <div className="profile-container">
+      <button type="button" className="button" onClick={this.getProfileDetails}>
+        Retry
+      </button>
+    </div>
+  )
 
   renderProfileDetails = () => {
     const {apiStatus} = this.state

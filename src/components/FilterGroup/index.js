@@ -4,14 +4,23 @@ const FilterGroup = props => {
   const renderTypesOfSalaryRange = () => {
     const {salaryRangesList} = props
     return (
-      <ul>
+      <ul className="list-container">
         {salaryRangesList.map(eachType => {
           const {changePackage} = props
           const onSalary = () => changePackage(eachType.salaryRangeId)
           return (
-            <li key={eachType.salaryRangeId} onClick={onSalary}>
-              <input type="checkbox" id="checkbox" />
-              <label htmlFor="checkbox">{eachType.label}</label>
+            <li
+              key={eachType.salaryRangeId}
+              onClick={onSalary}
+              className="list-item"
+            >
+              <input
+                type="radio"
+                id={eachType.salaryRangeId}
+                name="package"
+                value={eachType.label}
+              />
+              <label htmlFor={eachType.salaryRangeId}>{eachType.label}</label>
             </li>
           )
         })}
@@ -22,14 +31,24 @@ const FilterGroup = props => {
   const renderTypesOfEmployments = () => {
     const {employmentTypesList} = props
     return (
-      <ul>
+      <ul className="list-container">
         {employmentTypesList.map(eachType => {
           const {changeEmployment} = props
           const onEmployment = () => changeEmployment(eachType.employmentTypeId)
           return (
-            <li key={eachType.employmentTypeId} onClick={onEmployment}>
-              <input type="checkbox" id="checkbox" />
-              <label htmlFor="checkbox">{eachType.label}</label>
+            <li
+              key={eachType.employmentTypeId}
+              onClick={onEmployment}
+              className="list-item"
+            >
+              <input
+                type="checkbox"
+                id={eachType.employmentTypeId}
+                value={eachType.label}
+              />
+              <label htmlFor={eachType.employmentTypeId}>
+                {eachType.label}
+              </label>
             </li>
           )
         })}
@@ -38,10 +57,10 @@ const FilterGroup = props => {
   }
 
   return (
-    <div>
-      <p>Type Of Employment</p>
+    <div className="filter-group-container">
+      <h1 className="filter-heading">Type Of Employment</h1>
       {renderTypesOfEmployments()}
-      <p>Salary Range</p>
+      <h1 className="filter-heading">Salary Range</h1>
       {renderTypesOfSalaryRange()}
     </div>
   )

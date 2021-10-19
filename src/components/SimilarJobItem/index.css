@@ -1,0 +1,8 @@
+.each-similar-job-item {
+  list-style-type: none;
+  width: 25%;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #272727;
+  padding: 10px;
+}
